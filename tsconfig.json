@@ -1,0 +1,29 @@
+{
+    "exclude": [
+        "./coverage",
+        "./dist",
+        "__tests__",
+        "jest.config.js",
+        "eslint.config.js"
+    ],
+    "ts-node": {
+        "transpileOnly": true,
+        "files": true,
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    },
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "NodeNext",
+        "rootDir": "./src",
+        "moduleResolution": "NodeNext",
+        "lib": ["ES2021"],
+        "checkJs": true,
+        "outDir": "./dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
+    }
+}
