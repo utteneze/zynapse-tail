@@ -47,6 +47,7 @@
         "openai": "^4.31.0",
         "save-dev": "0.0.1-security",
         "twilio": "^5.0.1",
+        "winston": "^3.13.0",
         "zod": "^3.23.8"
     },
     "devDependencies": {

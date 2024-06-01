@@ -1,7 +1,10 @@
 import StatusCode from '@shared/interfaces/StatusCodes';
 import { User } from '@apps/auth/domain/entities/User';
 import { IUserRepository } from '@apps/auth/data-access/interfaces/IUserRepository';
-import UserModel, { UserDocument } from '@apps/auth/data-access/models/UserModel';
+import UserModel, {
+    UserDocument,
+} from '@apps/auth/data-access/models/UserModel';
+import logger from '@shared/logger/winston';
 
 export default class UserRepositoryMongoose implements IUserRepository {
     async findById(id: string): Promise<User | null> {
@@ -9,7 +12,7 @@ export default class UserRepositoryMongoose implements IUserRepository {
             const user = await UserModel.findById(id).lean();
             return this.mapToEntity(user);
         } catch (err) {
-            console.error('Error finding user by id:', err);
+            logger.error('Error finding user by id:', err);
             return null;
         }
     }
@@ -19,7 +22,7 @@ export default class UserRepositoryMongoose implements IUserRepository {
             const user = await UserModel.findOne({ 'email.id': email }).lean();
             return this.mapToEntity(user);
         } catch (err) {
-            console.error('Error finding user by email:', err);
+            logger.error('Error finding user by email:', err);
             return null;
         }
     }
@@ -31,7 +34,7 @@ export default class UserRepositoryMongoose implements IUserRepository {
             await UserModel.create(user);
             return StatusCode.CREATED;
         } catch (err) {
-            console.error('Error persisting user:', err);
+            logger.error('Error persisting user:', err);
             return StatusCode.INTERNAL_ERROR;
         }
     }
@@ -46,7 +49,7 @@ export default class UserRepositoryMongoose implements IUserRepository {
             );
             return StatusCode.OK;
         } catch (error) {
-            console.error('Error merging user:', error);
+            logger.error('Error merging user:', error);
             return StatusCode.INTERNAL_ERROR;
         }
     }
@@ -61,7 +64,7 @@ export default class UserRepositoryMongoose implements IUserRepository {
             );
             return StatusCode.OK;
         } catch (error) {
-            console.error('Error removing user:', error);
+            logger.error('Error removing user:', error);
             return StatusCode.INTERNAL_ERROR;
         }
     }

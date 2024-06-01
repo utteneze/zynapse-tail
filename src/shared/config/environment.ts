@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import dotenv from 'dotenv';
+import logger from '../../shared/logger/winston';
 dotenv.config();
 
 const envSchema = z.object({
@@ -11,14 +12,14 @@ const envSchema = z.object({
 });
 
 export default (() => {
-    console.log('[env] Environment variables have been injected from `.env`');
+    logger.info('[env] Environment variables have been injected from `.env`');
     const validatedEnv = envSchema.safeParse(process.env);
     if (!validatedEnv.success) {
         throw new Error(
             `Invalid environment variables: ${validatedEnv.error.message}`
         );
     }
-    console.log(
+    logger.info(
         '[env] Environment variables have been validated successfully.'
     );
 

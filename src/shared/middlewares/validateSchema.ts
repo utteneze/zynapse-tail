@@ -1,3 +1,4 @@
+import logger from '@shared/logger/winston';
 import { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 
@@ -22,7 +23,7 @@ function validateSchema(schema: Schema) {
             }
             next();
         } catch (error) {
-            console.error(error);
+            logger.error(error);
             if (error instanceof z.ZodError) {
                 const firstErrorMessage = error.errors[0].message;
                 return res.status(400).send({ error: firstErrorMessage });
