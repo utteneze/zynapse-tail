@@ -17,7 +17,6 @@ export default (() => {
         throw new Error(
             `Invalid environment variables: ${validatedEnv.error.message}`
         );
-        process.exit(1);
     }
     console.log(
         '[env] Environment variables have been validated successfully.'
