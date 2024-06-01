@@ -1,6 +1,6 @@
 'use strict';
 
-import env from '../config/environment.js';
+import env from '../config/environment';
 import mongoose from 'mongoose';
 
 const connectDB = async () => {

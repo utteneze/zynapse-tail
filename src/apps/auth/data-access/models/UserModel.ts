@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { UserAttributes } from '../../domain/entities/User.js';
+import { UserAttributes } from '@apps/auth/domain/entities/User';
 
 interface UserDocument extends Document, UserAttributes {}
 

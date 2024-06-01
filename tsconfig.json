@@ -4,7 +4,8 @@
         "./dist",
         "__tests__",
         "jest.config.js",
-        "eslint.config.js"
+        "eslint.config.js",
+        "./node_modules"
     ],
     "ts-node": {
         "transpileOnly": true,
@@ -13,10 +14,10 @@
         "experimentalSpecifierResolution": "node"
     },
     "compilerOptions": {
-        "target": "ES6",
-        "module": "NodeNext",
+        "target": "es6",
+        "module": "commonjs",
         "rootDir": "./src",
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "node",
         "lib": ["ES2021"],
         "checkJs": true,
         "outDir": "./dist",
@@ -24,6 +25,11 @@
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "noImplicitAny": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "paths": {
+            "@apps/*": ["./src/apps/*"],
+            "@shared/*": ["./src/shared/*"]
+        }
     }
 }

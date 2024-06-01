@@ -1,8 +1,8 @@
-import { IUseCase } from '../../../../shared/interfaces/IUseCase.js';
-import StatusCode from '../../../../shared/interfaces/StatusCodes.js';
-import { AppError } from '../../../../shared/webserver/AppError.js';
-import { IUserRepository } from '../../data-access/interfaces/IUserRepository.js';
-import { User } from '../entities/User.js';
+import { IUseCase } from '@shared/interfaces/IUseCase';
+import StatusCode from '@shared/interfaces/StatusCodes';
+import { AppError } from '@shared/webserver/AppError';
+import { IUserRepository } from '@apps/auth/data-access/interfaces/IUserRepository';
+import { User } from '@apps/auth/domain/entities/User';
 
 type Input = {
     username: string;

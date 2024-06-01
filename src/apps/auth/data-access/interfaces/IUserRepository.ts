@@ -1,5 +1,5 @@
-import StatusCode from '../../../../shared/interfaces/StatusCodes.js';
-import { User } from '../../domain/entities/User.js';
+import StatusCode from '@shared/interfaces/StatusCodes';
+import { User } from '@apps/auth/domain/entities/User';
 
 /**
  * Represents a repository for managing user data.

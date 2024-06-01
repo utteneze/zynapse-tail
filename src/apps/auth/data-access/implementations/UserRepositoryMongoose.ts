@@ -1,7 +1,7 @@
-import StatusCode from '../../../../shared/interfaces/StatusCodes.js';
-import { User } from '../../domain/entities/User.js';
-import { IUserRepository } from '../interfaces/IUserRepository.js';
-import UserModel, { UserDocument } from '../../data-access/models/UserModel.js';
+import StatusCode from '@shared/interfaces/StatusCodes';
+import { User } from '@apps/auth/domain/entities/User';
+import { IUserRepository } from '@apps/auth/data-access/interfaces/IUserRepository';
+import UserModel, { UserDocument } from '@apps/auth/data-access/models/UserModel';
 
 export default class UserRepositoryMongoose implements IUserRepository {
     async findById(id: string): Promise<User | null> {
