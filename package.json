@@ -4,6 +4,9 @@
     "description": "",
     "type": "module",
     "main": "index.js",
+    "engines": {
+        "node": "20.x"
+    },
     "scripts": {
         "preinstall": "npx only-allow pnpm",
         "test": "jest --coverage",
