@@ -2,6 +2,7 @@
     "name": "zynapse-tail",
     "version": "1.0.0",
     "description": "",
+    "type": "module",
     "main": "index.js",
     "scripts": {
         "preinstall": "npx only-allow pnpm",

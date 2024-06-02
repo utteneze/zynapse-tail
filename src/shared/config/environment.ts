@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import dotenv from 'dotenv';
-import logger from '../../shared/logger/winston';
+import logger from '../../shared/logger/winston.js';
 dotenv.config();
 
 const envSchema = z.object({

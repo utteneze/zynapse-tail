@@ -1,4 +1,4 @@
-import { AppError } from './AppError';
+import { AppError } from './AppError.js';
 import { Request, Response } from 'express';
 import notifier from 'node-notifier';
 

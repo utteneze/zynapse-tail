@@ -1,6 +1,6 @@
-import { ExpressServer as Server } from './shared/webserver/server';
-import bootstrap from './shared/config/bootstrap';
-import environment from './shared/config/environment';
+import { ExpressServer as Server } from './shared/webserver/server.js';
+import bootstrap from './shared/config/bootstrap.js';
+import environment from './shared/config/environment.js';
 import notifier from 'node-notifier';
 
 const start = async () => {

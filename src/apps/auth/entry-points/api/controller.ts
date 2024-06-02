@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { RegisterUser } from '@apps/auth/domain/services/RegisterUser';
-import { RegisterUserRequest } from './schema';
-import UserRepositoryMongoose from '@apps/auth/data-access/implementations/UserRepositoryMongoose';
+import { RegisterUser } from '@apps/auth/domain/services/RegisterUser.js';
+import { RegisterUserRequest } from './schema.js';
+import UserRepositoryMongoose from '@apps/auth/data-access/implementations/UserRepositoryMongoose.js';
 import asyncHandler from 'express-async-handler';
 
 const userRepository = new UserRepositoryMongoose();

@@ -1,4 +1,4 @@
-import connectDB from '../database/setup';
+import connectDB from '../database/setup.js';
 
 async function init() {
     connectDB();

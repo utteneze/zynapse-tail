@@ -1,4 +1,4 @@
-import logger from '@shared/logger/winston';
+import logger from '@shared/logger/winston.js';
 import { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 

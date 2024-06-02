@@ -3,10 +3,10 @@ import cors from 'cors';
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import ratelimit from 'express-rate-limit';
-import { Server } from '../interfaces/IServer';
-import env from '../config/environment';
+import { Server } from '../interfaces/IServer.js';
+import env from '../config/environment.js';
 
-import { errorMiddleware } from './error';
+import { errorMiddleware } from './error.js';
 import nocache from 'nocache';
 
 /**

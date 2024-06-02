@@ -15,9 +15,9 @@
     },
     "compilerOptions": {
         "target": "es6",
-        "module": "commonjs",
+        "module": "NodeNext",
         "rootDir": "./src",
-        "moduleResolution": "node",
+        "moduleResolution": "NodeNext",
         "lib": ["ES2021"],
         "checkJs": true,
         "outDir": "./dist",

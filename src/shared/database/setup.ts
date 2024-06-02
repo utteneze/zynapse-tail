@@ -1,7 +1,7 @@
 'use strict';
 
-import logger from '../../shared/logger/winston';
-import env from '../config/environment';
+import logger from '../../shared/logger/winston.js';
+import env from '../config/environment.js';
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
